@@ -1,5 +1,7 @@
 *.gem
 *.rbc
+*.yaml
+*.framework.zip
 /.config
 /coverage/
 /InstalledFiles
