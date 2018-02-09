@@ -9,8 +9,8 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Douglas Mendes", "Rafael Ferreria"]
   spec.email         = ["mendes-barreto@live.com", "rafael.yami@hotmail.com"]
 
-  spec.summary       = %q{This gem will do some thing important}
-  spec.description   = %q{And after all will input some here to do}
+  spec.summary       = %q{ This gem will get a binary upload to a private account or bucket like google cloud }
+  spec.description   = %q{ Thanks for my friend Rafael Ferreira help to start this project and make it possible }
   spec.homepage      = "https://github.com/mendesbarreto/cartup.git"
   spec.license       = "MIT"
 
