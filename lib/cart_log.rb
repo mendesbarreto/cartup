@@ -1,6 +1,6 @@
 require 'logger'
 
-# module CartBinaryUploader
+# module cartup
 #   class CartLog
 #     class << self
 #       def self.log

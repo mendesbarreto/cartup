@@ -1,0 +1,11 @@
+#!/usr/bin/env ruby
+
+require "cartup"
+
+COMMAND_RUN = "run"
+
+if ARGV[0] == COMMAND_RUN
+  CartBinaryUploader.run
+else
+  puts "Please the command was not found try to run " + COMMAND_RUN
+end

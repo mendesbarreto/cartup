@@ -1,4 +1,4 @@
 $LOAD_PATH.unshift File.expand_path("../../lib", __FILE__)
-require "CartBinaryUploader"
+require "cartup"
 
 require "minitest/autorun"

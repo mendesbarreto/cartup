@@ -1,18 +1,13 @@
 PATH
   remote: .
   specs:
-    CartBinaryUploader (0.1.0)
+    cartup (0.1.0)
 
 GEM
   remote: https://rubygems.org/
   specs:
     addressable (2.5.2)
       public_suffix (>= 2.0.2, < 4.0)
-    awesome_print (1.7.0)
-    beautiful-log (0.2.1)
-      awesome_print (~> 1.7.0)
-      colorize (~> 0.8.1)
-    colorize (0.8.1)
     declarative (0.0.10)
     declarative-option (0.1.0)
     digest-crc (0.4.1)
@@ -75,9 +70,8 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  CartBinaryUploader!
-  beautiful-log (~> 0.2.1)
   bundler (~> 1.16)
+  cartup!
   google-cloud-storage (~> 1.9)
   json (~> 2.1)
   minitest (~> 5.0)
