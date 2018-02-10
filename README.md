@@ -16,7 +16,7 @@ manually and because that the gem was born! To the people like me who are a bit 
 this is for you!!! 
 
 **So, in a head line: Our gem wants to make the process of distribution of prebuild carthage binaries easier through the 
-most popular storage cloud.**
+most populars storage clouds.**
 
 *One big thanks for my friend and brother [Rafael Ferreira](https://github.com/RafaelPlantard) that make the initials
 scripts(Shell and Ruby) and that's give me Ideia to bring it to ruby and distribute to every body by RubyGem!* 
