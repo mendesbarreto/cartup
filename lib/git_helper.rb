@@ -1,25 +1,26 @@
+require 'cart_logger'
 
 class GitHelper
 
   def tagTo version
-    puts "Tagging version to:  " + version
+    CartLogger.logInfo "Tagging version to:  " + version
     begin
       cmd = "git tag -f " + version
       exec( cmd )
-      puts "Version tagged"
+      CartLogger.logInfo "Version tagged"
     rescue
-      puts "Problem to generate tag on git"
+      CartLogger.logError "Problem to generate tag on git"
     end
   end
 
   def push
-    puts "Pushing tag to Git "
+    CartLogger.logInfo "Pushing tag to Git "
     begin
       cmd = "git push --tags"
       exec( cmd )
-      puts "Tag pushed"
+      CartLogger.logInfo "Tag pushed"
     rescue
-      puts "Problem to push tag on git"
+      CartLogger.logError "Problem to push tag on git"
     end
 
   end

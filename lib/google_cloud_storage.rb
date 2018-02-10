@@ -2,6 +2,7 @@ require 'google/cloud/storage'
 require 'fileutils'
 require 'yaml'
 require 'json'
+require 'cart_logger'
 
 module CartBinaryUploader
   class GoogleCloudStorage
@@ -30,7 +31,7 @@ module CartBinaryUploader
     end
 
     def createStorage
-      puts "Creating google storage with id: " + @projectId + "credenciasPath: " + @credentialsFilePath
+      CartLogger.logInfo "Creating google storage with id: " + @projectId + "credenciasPath: " + @credentialsFilePath
       @storage = Google::Cloud::Storage.new(
           project_id: @projectId,
           credentials: @credentialsFilePath
@@ -38,24 +39,24 @@ module CartBinaryUploader
     end
 
     def createBucket
-      puts "Creating bucket name: " + @bucketName
+      CartLogger.logInfo "Creating bucket name: " + @bucketName
       @bucket = @storage.bucket @bucketName
     end
 
     def uploadFrameWork
-      puts "Prepering to upload file to google cloud"
+      CartLogger.logInfo "Prepering to upload file to google cloud"
       frameworkNameSource = @frameworkName + FRAMEWORK_EXTENSION_NAME + JSON_EXTENSION_ZIP
       frameworkNameDestination = @frameworkName + FRAMEWORK_EXTENSION_NAME + "." + @frameworkVersion + JSON_EXTENSION_ZIP
       jsonPath = @frameworkName + JSON_EXTENSION_NAME
 
-      puts "Framework Source: " + frameworkNameSource
-      puts "Framework Destination: " + frameworkNameDestination
-      puts "JSON Path: " + jsonPath
+      CartLogger.logInfo "Framework Source: " + frameworkNameSource
+      CartLogger.logInfo "Framework Destination: " + frameworkNameDestination
+      CartLogger.logInfo "JSON Path: " + jsonPath
 
       unless !hasFileOnGoogleCloud frameworkNameDestination
         throw :the_version_file_already_exists, "The current version: " + @frameworkVersion + " already exists on google cloud"
       else
-        puts "File version "+ @frameworkVersion +" not exists yet, starting generate file on google cloud"
+        CartLogger.logInfo "File version "+ @frameworkVersion +" not exists yet, starting generate file on google cloud"
         jsonFile = downloadZConfigJsonFile(jsonPath)
 
         if jsonFile.nil?
@@ -75,7 +76,7 @@ module CartBinaryUploader
     end
 
     def hasFileOnGoogleCloud file
-      puts "Verifying if the version file "+ file +" already exists"
+      CartLogger.logInfo "Verifying if the version file "+ file +" already exists"
       bucketFile = bucket.file file
       !bucketFile.nil?
     end
@@ -88,26 +89,26 @@ module CartBinaryUploader
     end
 
     def loadJSONObject jsonPath
-      puts "Loading JSON file"
+      CartLogger.logInfo "Loading JSON file"
       json = File.read(jsonPath)
       object = JSON.parse(json)
-      puts object
-      puts "JSON Loaded"
+      CartLogger.logInfo object
+      CartLogger.logInfo "JSON Loaded"
       object
     end
 
     def saveJSONObject(jsonPath, jsonObject)
       binaryJson = JSON.pretty_generate(jsonObject)
-      puts "Saving JSON Object in: " + jsonPath + "JSON: " + binaryJson
+      CartLogger.logInfo "Saving JSON Object in: " + jsonPath + "JSON: " + binaryJson
       File.write(jsonPath, binaryJson)
-      puts "JSON Saved"
+      CartLogger.logInfo "JSON Saved"
     end
 
 
     def uploadJson jsonPath
-      puts "Starting upload file to google cloud"
+      CartLogger.logInfo "Starting upload file to google cloud"
       @bucket.create_file(jsonPath, jsonPath)
-      puts "Uploaded complete"
+      CartLogger.logInfo "Uploaded complete"
     end
 
   end

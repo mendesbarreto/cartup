@@ -5,6 +5,8 @@ require 'json'
 require 'ostruct'
 require 'google_cloud_storage'
 require 'git_helper'
+require 'cartup_command_helper'
+require 'cart_logger'
 
 module CartBinaryUploader
   def self.run
@@ -45,14 +47,14 @@ module CartBinaryUploader
 
   def self.getConfig
     begin
-      puts "Creating project config"
+      CartLogger.logInfo "Creating project config"
       path = FileUtils.pwd + '/cart_uploader.yaml'
       yamlFile = YAML.load_file(path)
       object = JSON.parse(yamlFile.to_json, object_class: OpenStruct)
-      puts "project config Created"
+      CartLogger.logInfo "project config Created"
       object
     rescue SystemCallError
-      puts "Problem to find or pase yaml file"
+      CartLogger.logError "Problem to find or pase yaml file"
       exit
     end
 
