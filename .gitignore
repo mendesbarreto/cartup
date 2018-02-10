@@ -17,6 +17,9 @@ carrefour-dev-homolog-qa.json
 # Used by dotenv library to load environment variables.
 # .env
 
+## Rubymine
+.idea/
+
 ## Specific to RubyMotion:
 .dat*
 .repl_history
