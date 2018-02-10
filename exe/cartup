@@ -8,18 +8,5 @@ COMMAND_HELP = "help"
 
 command = ARGV[0]
 
-helpDescription = <<-EOF
-  These are common Cartup commands used in some situations: 
-    - init      Create an empty cart_uploader.yaml 
-    - run       uploading the Carthage prebuilts to a cloud storage
-    - help      show help instructions and list available subcommands
-EOF
-
-if command == COMMAND_RUN
-  CartBinaryUploader.run
-elsif command == COMMAND_INIT
-  CartBinaryUploader.init
-else
-  puts helpDescription
-end
-
+commandHelper = CartBinaryUploader::CartupCommandHelper.new
+commandHelper.handle command
