@@ -1,8 +1,27 @@
-# CartBinaryUploader
+# Cartup
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/CartBinaryUploader`. To experiment with that code, run `bin/console` for an interactive prompt.
 
-TODO: Delete this and the text above, and describe your gem
+**Cartup** is the easyest way to share prebuilts [Carthage](https://github.com/Carthage/Carthage) frameworks between our projects.
+
+The main propose of this gem is uploading the [Carthage](https://github.com/Carthage/Carthage) prebuilts to a cloud 
+storage like, drive, onedrive, dropbox or google cloud. To know more how to make prebuilts with Carthage please follow 
+the [link about how to do it](https://github.com/Carthage/Carthage#archive-prebuilt-frameworks-into-one-zip-file) 
+
+Currently, the main problem is because only github projects could upload a prebuilts frameworks and distrubuite
+them using a great github tool called ["RELEASES"](https://help.github.com/articles/creating-releases/) automatically. 
+To people like me who the majority of our clients using Bitbucket the all process should be done manually. So you should
+upload the prebuilts frameworks on some sort of cloud storage and manage the version using a JSON file and upload 
+manually and because that the gem was born! To the people like me who are a bit lazy and do not like to do manual job, 
+this is for you!!! 
+
+**So, in a head line: Our gem wants to make the process of distribution of prebuild carthage binaries easier through the 
+most popular storage cloud.**
+
+*One big thanks for my friend and brother [Rafael Ferreira](https://github.com/RafaelPlantard) that make the initials
+scripts(Shell and Ruby) and that's give me Ideia to bring it to a ruby class struct and RubyGem to distribute to every body!* 
+
+## Supported Storage Clouds
+* [Firebase Cloud Storage](https://firebase.google.com/docs/storage/?gclid=Cj0KCQiAzfrTBRC_ARIsAJ5ps0uB9qOHR9kDhzlqReNfQlhrRJH7gWwHRCbl-XQRIJEvt9jN6ROPdxQaAohIEALw_wcB)
 
 ## Installation
 
@@ -14,15 +33,51 @@ gem 'cartup'
 
 And then execute:
 
-    $ bundle
+    $ bundle install
 
 Or install it yourself as:
 
-    $ gem install CartBinaryUploader
+    $ gem install cartup
 
 ## Usage
 
-TODO: Write usage instructions here
+### Setup with yaml
+
+The first thing is setup the yaml file in or project. 
+Create a file name called ```cart_uploader.yaml``` inside of this file insert:
+
+```yaml
+project:
+  framework:
+    version: "1.0.0"
+    name: "Cartup"
+  google:
+    project_id: "<Insert here Google project ID>"
+    credentials_file: "<Insert here The path to credential file that you download from firebase>"
+    bucket: "<Insert here the name of destination bucket on google cloud>"
+```
+### Upload a binary
+
+After you have created the ````yaml```` file and setup it, you are ready to send the prebuilt frame
+some cloud storage.
+
+**Before you could run the upload command make you already make the follow steps:** 
+* Generated the build with carthage like ```carthage build --no-skip-current```
+* Archived the framework with carthage with the command ```carthage archive <YourFrameworkName>```
+
+*If you hae any doubts about how to generate prebuilts framework [click here to see more information](https://github.com/Carthage/Carthage#archive-prebuilt-frameworks-into-one-zip-file))*
+
+Now everything is alright jus run the follow command:  
+
+if you are running with bundler:
+```
+bundle exec cartup run
+```
+
+if you are running without bundler:
+```
+cartup run
+```
 
 ## Development
 
@@ -32,7 +87,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/CartBinaryUploader. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at https://github.com/mendesbarreto/cartup/. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
 ## License
 
@@ -40,4 +95,4 @@ The gem is available as open source under the terms of the [MIT License](https:/
 
 ## Code of Conduct
 
-Everyone interacting in the CartBinaryUploader project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/[USERNAME]/CartBinaryUploader/blob/master/CODE_OF_CONDUCT.md).
+Everyone interacting in the Cartup project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/mendesbarreto/cartup/blob/master/CODE_OF_CONDUCT.md).
