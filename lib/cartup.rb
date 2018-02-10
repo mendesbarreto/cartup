@@ -28,6 +28,21 @@ module CartBinaryUploader
     gitHelper.push
   end
 
+  def self.init
+    CartBinaryUploader.copyTemplateYaml
+  end
+
+  def self.copyTemplateYaml
+    fromSourceFile = "./lib/template.yaml"
+    toDestinationFile = "./cart_uploader.yaml"
+    CartBinaryUploader.copy_with_path fromSourceFile, toDestinationFile
+  end
+
+  def self.copy_with_path(src, dst)
+    FileUtils.mkdir_p(File.dirname(dst))
+    FileUtils.cp(src, dst)
+  end
+
   def self.getConfig
     begin
       puts "Creating project config"

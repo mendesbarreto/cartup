@@ -2,10 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2cc0f238-7716-4897-a61e-580bf41f147c" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.rakeTasks" afterPath="$PROJECT_DIR$/.idea/.rakeTasks" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/CartBinaryUploader.gemspec" afterPath="$PROJECT_DIR$/CartBinaryUploader.gemspec" />
-      <change beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="$PROJECT_DIR$/Gemfile.lock" />
+      <change beforePath="$PROJECT_DIR$/exe/cartup" afterPath="$PROJECT_DIR$/exe/cartup" />
+      <change beforePath="$PROJECT_DIR$/lib/CartBinaryUploader/version.rb" afterPath="$PROJECT_DIR$/lib/CartBinaryUploader/version.rb" />
+      <change beforePath="$PROJECT_DIR$/lib/cartup.rb" afterPath="$PROJECT_DIR$/lib/cartup.rb" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -15,17 +16,37 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/CartBinaryUploader@build__CartBinaryUploader.coverage" NAME="build: CartBinaryUploader Coverage Results" MODIFIED="1518186881017" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="CartBinaryUploader" />
-    <SUITE FILE_PATH="coverage/CartBinaryUploader@IRB_console__CartBinaryUploader.coverage" NAME="IRB console: CartBinaryUploader Coverage Results" MODIFIED="1518185422229" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="CartBinaryUploader" />
-    <SUITE FILE_PATH="coverage/CartBinaryUploader@install__CartBinaryUploader.coverage" NAME="install: CartBinaryUploader Coverage Results" MODIFIED="1518186883667" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="CartBinaryUploader" />
+    <SUITE FILE_PATH="coverage/CartBinaryUploader@build__CartBinaryUploader.coverage" NAME="build: CartBinaryUploader Coverage Results" MODIFIED="1518293934143" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="CartBinaryUploader" />
+    <SUITE FILE_PATH="coverage/CartBinaryUploader@IRB_console__CartBinaryUploader.coverage" NAME="IRB console: CartBinaryUploader Coverage Results" MODIFIED="1518293835919" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="CartBinaryUploader" />
+    <SUITE FILE_PATH="coverage/CartBinaryUploader@install__CartBinaryUploader.coverage" NAME="install: CartBinaryUploader Coverage Results" MODIFIED="1518293936848" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="CartBinaryUploader" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="CartBinaryUploader.gemspec" pinned="false" current-in-tab="true">
+      <file leaf-file-name="CartBinaryUploader.gemspec" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CartBinaryUploader.gemspec">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="19" column="115" lean-forward="true" selection-start-line="19" selection-start-column="115" selection-end-line="19" selection-end-column="115" />
+            <state relative-caret-position="105">
+              <caret line="7" column="45" lean-forward="false" selection-start-line="7" selection-start-column="45" selection-end-line="7" selection-end-column="45" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="template.yaml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/template.yaml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="6" column="35" lean-forward="false" selection-start-line="6" selection-start-column="35" selection-end-line="6" selection-end-column="35" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="cartup.rb" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/lib/cartup.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="412">
+              <caret line="38" column="5" lean-forward="true" selection-start-line="38" selection-start-column="5" selection-end-line="38" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -36,7 +57,7 @@
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
               <first_editor relative-caret-position="300">
-                <caret line="20" column="126" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="20" selection-end-column="126" />
+                <caret line="20" column="126" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="20" selection-end-column="126" />
                 <folding>
                   <marker date="1518292147012" expanded="true" signature="2060:2354" ph="project: &lt;2 keys&gt;" />
                   <marker date="1518292147012" expanded="true" signature="2071:2121" ph="framework: &lt;2 keys&gt;" />
@@ -49,6 +70,26 @@
                 </folding>
               </first_editor>
               <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="version.rb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/CartBinaryUploader/version.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="15">
+              <caret line="1" column="18" lean-forward="false" selection-start-line="1" selection-start-column="18" selection-end-line="1" selection-end-column="18" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="cartup" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/exe/cartup">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="20" column="2" lean-forward="false" selection-start-line="20" selection-start-column="2" selection-end-line="20" selection-end-column="25" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -67,10 +108,12 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/exe/cartup" />
-        <option value="$PROJECT_DIR$/lib/CartBinaryUploader/version.rb" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/CartBinaryUploader.gemspec" />
+        <option value="$PROJECT_DIR$/lib/template.yaml" />
+        <option value="$PROJECT_DIR$/exe/cartup" />
+        <option value="$PROJECT_DIR$/lib/CartBinaryUploader/version.rb" />
+        <option value="$PROJECT_DIR$/lib/cartup.rb" />
       </list>
     </option>
   </component>
@@ -106,6 +149,21 @@
               <item name="CartBinaryUploader" type="b2602c69:ProjectViewProjectNode" />
               <item name="CartBinaryUploader" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="CartBinaryUploader" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CartBinaryUploader" type="462c0819:PsiDirectoryNode" />
+              <item name="exe" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CartBinaryUploader" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CartBinaryUploader" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CartBinaryUploader" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CartBinaryUploader" type="462c0819:PsiDirectoryNode" />
+              <item name="pkg" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -119,6 +177,11 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="RakeTaksPopup.undocumentedIncluded" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/pkg" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -202,11 +265,12 @@
       <item index="2" class="java.lang.String" itemvalue="IRB console.IRB console: CartBinaryUploader" />
     </list>
     <recent_temporary>
-      <list size="4">
+      <list size="5">
         <item index="0" class="java.lang.String" itemvalue="Rake.install: CartBinaryUploader" />
         <item index="1" class="java.lang.String" itemvalue="Rake.build: CartBinaryUploader" />
         <item index="2" class="java.lang.String" itemvalue="IRB console.IRB console: CartBinaryUploader" />
         <item index="3" class="java.lang.String" itemvalue="IRB console.IRB console: CartBinaryUploader" />
+        <item index="4" class="java.lang.String" itemvalue="IRB console.IRB console: CartBinaryUploader" />
       </list>
     </recent_temporary>
   </component>
@@ -223,7 +287,7 @@
       <updated>1518133084644</updated>
       <workItem from="1518133085882" duration="1308000" />
       <workItem from="1518185364675" duration="2455000" />
-      <workItem from="1518287970300" duration="4324000" />
+      <workItem from="1518287970300" duration="5850000" />
     </task>
     <task id="LOCAL-00001" summary="Change Command CartBinaryUploader exec name to cartup">
       <created>1518186316469</created>
@@ -236,19 +300,19 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8087000" />
+    <option name="totallyTimeSpent" value="9613000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2267525" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2267525" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3381295" sideWeight="0.50500715" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3381295" sideWeight="0.49499285" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3381295" sideWeight="0.49499285" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -429,36 +493,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/exe/cartup">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="3" lean-forward="false" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/cart_uploader.yaml" />
-    <entry file="file://$PROJECT_DIR$/lib/CartBinaryUploader/version.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="18" lean-forward="false" selection-start-line="1" selection-start-column="18" selection-end-line="1" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/cartup.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="293">
-          <caret line="24" column="46" lean-forward="false" selection-start-line="24" selection-start-column="46" selection-end-line="24" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="300">
-            <caret line="20" column="126" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="20" selection-end-column="126" />
+            <caret line="20" column="126" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="20" selection-end-column="126" />
             <folding>
               <marker date="1518292147012" expanded="true" signature="2060:2354" ph="project: &lt;2 keys&gt;" />
               <marker date="1518292147012" expanded="true" signature="2071:2121" ph="framework: &lt;2 keys&gt;" />
@@ -474,10 +514,50 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/lib/template.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="35" lean-forward="false" selection-start-line="6" selection-start-column="35" selection-end-line="6" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/CartBinaryUploader.gemspec">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="115" lean-forward="true" selection-start-line="19" selection-start-column="115" selection-end-line="19" selection-end-column="115" />
+        <state relative-caret-position="105">
+          <caret line="7" column="45" lean-forward="false" selection-start-line="7" selection-start-column="45" selection-end-line="7" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/CartBinaryUploader/version.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="18" lean-forward="false" selection-start-line="1" selection-start-column="18" selection-end-line="1" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/cartup-0.1.2/lib/cartup.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="116">
+          <caret line="37" column="4" lean-forward="true" selection-start-line="37" selection-start-column="4" selection-end-line="37" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/exe/cartup">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="2" lean-forward="false" selection-start-line="20" selection-start-column="2" selection-end-line="20" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/cartup.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="412">
+          <caret line="38" column="5" lean-forward="true" selection-start-line="38" selection-start-column="5" selection-end-line="38" selection-end-column="5" />
           <folding />
         </state>
       </provider>
