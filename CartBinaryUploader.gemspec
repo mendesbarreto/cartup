@@ -8,13 +8,9 @@ Gem::Specification.new do |spec|
   spec.version       = CartBinaryUploader::VERSION
   spec.authors       = ["Douglas Mendes", "Rafael Ferreria"]
   spec.email         = ["mendes-barreto@live.com", "rafael.yami@hotmail.com"]
-
   spec.summary       = %q{ This gem will help you to upload the carthage binaries a privates accounts like google cloud, s3 e etc. }
   spec.description   = <<-EOF
-    Cartup is the easyest way to share prebuilts Carthage frameworks between our projects.
-
-    One big thanks for my friend and brother [Rafael Ferreira](https://github.com/RafaelPlantard) that make the initials
-    scripts(Shell and Ruby) and that's give me Ideia to bring it to a ruby class struct and RubyGem to distribute to every body!
+    Cartup is the easyest way to share prebuilts Carthage frameworks between projects.
   EOF
 
   spec.homepage      = "https://github.com/mendesbarreto/cartup.git"
