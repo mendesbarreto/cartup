@@ -9,7 +9,7 @@ COMMAND_HELP = "help"
 command = ARGV[0]
 
 helpDescription = <<-EOF
-  These are common Git commands used in various situations: 
+  These are common Cartup commands used in some situations: 
     - init      Create an empty cart_uploader.yaml 
     - run       uploading the Carthage prebuilts to a cloud storage
     - help      show help instructions and list available subcommands
