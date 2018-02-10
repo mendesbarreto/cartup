@@ -1,0 +1,8 @@
+project:
+  framework:
+    version: "0.0.1"
+    name: "<Name you use to archive the FRAMEWORK on Carthage>"
+  google:
+    project_id: "<Insert here Google project ID>"
+    credentials_file: "Insert here The path to credential file that you download from firebase"
+    bucket: '<Insert here the name of destination bucket on google cloud>'
