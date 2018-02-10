@@ -1,15 +1,16 @@
 # Cartup
 
 
-**Cartup** is the easyest way to share prebuilts [Carthage](https://github.com/Carthage/Carthage) frameworks between our projects.
+**Cartup** is the easyest way to share prebuilts [Carthage](https://github.com/Carthage/Carthage) frameworks between projects.
 
-The main propose of this gem is uploading the [Carthage](https://github.com/Carthage/Carthage) prebuilts to a cloud 
-storage like, drive, onedrive, dropbox or google cloud. To know more how to make prebuilts with Carthage please follow 
+The main propose of this gem is uploading the [Carthage](https://github.com/Carthage/Carthage) prebuilts frameworks to a cloud 
+storage like google drive, onedrive, dropbox or google cloud. To know more how to make prebuilts with Carthage please follow 
 the [link about how to do it](https://github.com/Carthage/Carthage#archive-prebuilt-frameworks-into-one-zip-file) 
 
-Currently, the main problem is because only github projects could upload a prebuilts frameworks and distrubuite
+
+Currently, the main reason is because only github projects could upload a prebuilts frameworks and distrubuite
 them using a great github tool called ["RELEASES"](https://help.github.com/articles/creating-releases/) automatically. 
-To people like me who the majority of our clients using Bitbucket the all process should be done manually. So you should
+To people like me who works using Bitbucket (not because of my choice) the all process should be done manually. So you should
 upload the prebuilts frameworks on some sort of cloud storage and manage the version using a JSON file and upload 
 manually and because that the gem was born! To the people like me who are a bit lazy and do not like to do manual job, 
 this is for you!!! 
