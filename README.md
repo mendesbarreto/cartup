@@ -19,7 +19,7 @@ this is for you!!!
 most popular storage cloud.**
 
 *One big thanks for my friend and brother [Rafael Ferreira](https://github.com/RafaelPlantard) that make the initials
-scripts(Shell and Ruby) and that's give me Ideia to bring it to a ruby class struct and RubyGem to distribute to every body!* 
+scripts(Shell and Ruby) and that's give me Ideia to bring it to ruby and distribute to every body by RubyGem!* 
 
 ## Supported Storage Clouds
 * [Firebase Cloud Storage](https://firebase.google.com/docs/storage/?gclid=Cj0KCQiAzfrTBRC_ARIsAJ5ps0uB9qOHR9kDhzlqReNfQlhrRJH7gWwHRCbl-XQRIJEvt9jN6ROPdxQaAohIEALw_wcB)
