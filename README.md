@@ -1,5 +1,6 @@
-# Cartup
+# Cartup 
 
+![](logo/cartup_logo.png)
 
 **Cartup** is the easyest way to share prebuilts [Carthage](https://github.com/Carthage/Carthage) frameworks between projects.
 
