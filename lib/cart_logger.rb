@@ -14,11 +14,11 @@ module CartBinaryUploader
         @logger
       end
 
-      def logInfo string
+      def log_info string
         CartLogger.log.info string
       end
 
-      def logError string
+      def log_error string
         CartLogger.log.error string.to_s.colorize(:color => :white, :background => :red)
       end
 

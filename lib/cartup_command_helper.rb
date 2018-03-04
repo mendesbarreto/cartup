@@ -1,10 +1,10 @@
-require "cartup"
+require 'cartup'
 
 module CartBinaryUploader
   class CartupCommandHelper
-    COMMAND_RUN = "run"
-    COMMAND_INIT = "init"
-    COMMAND_HELP = "help"
+    COMMAND_RUN = 'run'
+    COMMAND_INIT = 'init'
+    COMMAND_HELP = 'help'
 
     attr_reader :helpDescription
 
@@ -20,18 +20,18 @@ module CartBinaryUploader
 
     def handle(command)
       case command
-        when COMMAND_RUN
-          CartBinaryUploader.run
-        when COMMAND_INIT
-          CartBinaryUploader.init
-        when COMMAND_HELP
-          printHelper
-        else
-          printHelper
+      when COMMAND_RUN
+        CartBinaryUploader.run
+      when COMMAND_INIT
+        CartBinaryUploader.init
+      when COMMAND_HELP
+        print_helper
+      else
+        print_helper
       end
     end
 
-    def printHelper
+    def print_helper
       puts @helpDescription
     end
 
