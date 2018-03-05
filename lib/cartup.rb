@@ -1,4 +1,4 @@
-require "CartBinaryUploader/version"
+require 'CartBinaryUploader/version'
 require 'fileutils'
 require 'yaml'
 require 'json'

@@ -2,9 +2,9 @@ require 'cartup'
 
 module CartBinaryUploader
   class CartupCommandHelper
-    COMMAND_RUN = 'run'
-    COMMAND_INIT = 'init'
-    COMMAND_HELP = 'help'
+    COMMAND_RUN = 'run'.freeze
+    COMMAND_INIT = 'init'.freeze
+    COMMAND_HELP = 'help'.freeze
 
     attr_reader :help_description
 

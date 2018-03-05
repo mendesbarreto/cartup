@@ -7,9 +7,9 @@ require 'cart_logger'
 module CartBinaryUploader
   class GoogleCloudStorage
 
-    FRAMEWORK_EXTENSION_NAME = '.framework'
-    JSON_EXTENSION_NAME = '.json'
-    JSON_EXTENSION_ZIP = '.zip'
+    FRAMEWORK_EXTENSION_NAME = '.framework'.freeze
+    JSON_EXTENSION_NAME = '.json'.freeze
+    JSON_EXTENSION_ZIP = '.zip'.freeze
 
     attr_accessor :project_id
     attr_accessor :credentials_file_path
