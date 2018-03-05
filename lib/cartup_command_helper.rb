@@ -6,10 +6,10 @@ module CartBinaryUploader
     COMMAND_INIT = 'init'
     COMMAND_HELP = 'help'
 
-    attr_reader :helpDescription
+    attr_reader :help_description
 
     def initialize
-      @helpDescription = <<-EOF
+      @help_description = <<-EOF
         These are common Cartup commands used in some situations: 
         - init      Create an empty cart_uploader.yaml 
         - run       uploading the Carthage prebuilts to a cloud storage
@@ -32,7 +32,7 @@ module CartBinaryUploader
     end
 
     def print_helper
-      puts @helpDescription
+      puts @help_description
     end
 
   end
