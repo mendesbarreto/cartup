@@ -1,4 +1,4 @@
-require "CartBinaryUploader/version"
+require 'CartBinaryUploader/version'
 require 'fileutils'
 require 'yaml'
 require 'json'
@@ -10,34 +10,34 @@ require 'cart_logger'
 
 module CartBinaryUploader
   def self.run
-    config = getConfig
+    config = get_config
 
-    projectId = config.project.google.project_id
-    credentialsFile = config.project.google.credentials_file
-    bucketName = config.project.google.bucket
-    frameworkName = config.project.framework.name
-    frameworkVersion = config.project.framework.version
+    project_id = config.project.google.project_id
+    credentials_file = config.project.google.credentials_file
+    bucket_name = config.project.google.bucket
+    framework_name = config.project.framework.name
+    framework_version = config.project.framework.version
 
-    gitHelper = GitHelper.new
+    git_helper = GitHelper.new
 
-    googleCloudStorage = GoogleCloudStorage.new(projectId,
-                                                credentialsFile,
-                                                bucketName,
-                                                frameworkName,
-                                                frameworkVersion)
-    googleCloudStorage.uploadFrameWork
-    gitHelper.tagTo frameworkVersion
-    gitHelper.push
+    google_cloud_storage = GoogleCloudStorage.new(project_id,
+                                                credentials_file,
+                                                bucket_name,
+                                                framework_name,
+                                                framework_version)
+    google_cloud_storage.upload_framework
+    git_helper.tag_to framework_version
+    git_helper.push
   end
 
   def self.init
-    CartBinaryUploader.copyTemplateYaml
+    CartBinaryUploader.copy_template_yaml
   end
 
-  def self.copyTemplateYaml
-    fromSourceFile = "./lib/template.yaml"
-    toDestinationFile = "./cart_uploader.yaml"
-    CartBinaryUploader.copy_with_path fromSourceFile, toDestinationFile
+  def self.copy_template_yaml
+    from_source_file = './lib/template.yaml'
+    to_destination_file = './cart_uploader.yaml'
+    CartBinaryUploader.copy_with_path from_source_file, to_destination_file
   end
 
   def self.copy_with_path(src, dst)
@@ -45,16 +45,16 @@ module CartBinaryUploader
     FileUtils.cp(src, dst)
   end
 
-  def self.getConfig
+  def self.get_config
     begin
-      CartLogger.logInfo "Creating project config"
+      CartLogger.log_info 'Creating project config'
       path = FileUtils.pwd + '/cart_uploader.yaml'
-      yamlFile = YAML.load_file(path)
-      object = JSON.parse(yamlFile.to_json, object_class: OpenStruct)
-      CartLogger.logInfo "project config Created"
+      yaml_file = YAML.load_file(path)
+      object = JSON.parse(yaml_file.to_json, object_class: OpenStruct)
+      CartLogger.log_info 'project config Created'
       object
     rescue SystemCallError
-      CartLogger.logError "Problem to find or pase yaml file"
+      CartLogger.log_error 'Problem to find or pase yaml file'
       exit
     end
 
