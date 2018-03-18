@@ -27,14 +27,14 @@ module CartBinaryUploader
   def self.setup config
     if !config.project.google?
       CartLogger.log_info 'Starting with google cloud'
-      setupGoogleCloud config
+      setup_google_cloud config
     else
       CartLogger.log_info 'Starting with s3 cloud'
-      setupS3Cloud config
+      setup_s3_cloud config
     end
   end
 
-  def self.setupGoogleCloud config
+  def self.setup_google_cloud(config)
     GoogleCloudStorage.new(config.project.google.project_id,
                            config.project.google.credentials_file,
                            config.project.google.bucket,
@@ -42,7 +42,7 @@ module CartBinaryUploader
                            config.project.framework.version)
   end
 
-  def self.setupS3Cloud config
+  def self.setup_s3_cloud(config)
     S3CloudStorage.new(config.project.s3.bucket_name,
                        config.project.s3.bucket_access_key,
                        config.project.s3.bucket_secret_key,
