@@ -32,10 +32,12 @@ Gem::Specification.new do |spec|
   spec.executables   = ['cartup']
   spec.require_paths = ['lib']
 
+  spec.add_development_dependency 'aws-sdk-s3', '~> 1.8', '>= 1.8.2'
   spec.add_development_dependency 'bundler', '~> 1.16'
-  spec.add_development_dependency 'rake', '~> 10.0'
-  spec.add_development_dependency 'minitest', '~> 5.0'
+  spec.add_development_dependency 'colorize', '~> 0.8.1'
   spec.add_development_dependency 'google-cloud-storage', '~> 1.9'
   spec.add_development_dependency 'json', '~> 2.1'
-  spec.add_development_dependency 'colorize', '~> 0.8.1'
+  spec.add_development_dependency 'minitest', '~> 5.0'
+  spec.add_development_dependency 'rake', '~> 10.0'
+
 end

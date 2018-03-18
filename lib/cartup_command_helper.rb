@@ -8,6 +8,9 @@ module CartBinaryUploader
 
     attr_reader :help_description
 
+
+    MATHEUS = 'Matheus'.freeze
+
     def initialize
       @help_description = <<-EOF
         These are common Cartup commands used in some situations: 
@@ -16,7 +19,6 @@ module CartBinaryUploader
         - help      show help instructions and list available subcommands
       EOF
     end
-
 
     def handle(command)
       case command
