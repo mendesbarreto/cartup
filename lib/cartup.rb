@@ -25,13 +25,14 @@ module CartBinaryUploader
   end
 
   def self.setup config
-    if !config.project.google?
-      CartLogger.log_info 'Starting with google cloud'
-      setup_google_cloud config
-    else
-      CartLogger.log_info 'Starting with s3 cloud'
-      setup_s3_cloud config
-    end
+    setup_s3_cloud config
+    # if !config.project.google?
+    #   CartLogger.log_info 'Starting with google cloud'
+    #   setup_google_cloud config
+    # else
+    #   CartLogger.log_info 'Starting with s3 cloud'
+    #   setup_s3_cloud config
+    # end
   end
 
   def self.setup_google_cloud(config)
