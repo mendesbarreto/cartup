@@ -6,3 +6,8 @@ project:
     project_id: "<Insert here Google project ID>"
     credentials_file: "Insert here The path to credential file that you download from firebase"
     bucket: '<Insert here the name of destination bucket on google cloud>'
+  s3:
+    region: "<Insert Region Name where you bucket is located"
+    bucket_name: "<The nam of you bucket>"
+    bucket_access_key: '<Your access key>'
+    bucket_secret_key: '<Your secret key>'
