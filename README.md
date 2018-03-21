@@ -29,6 +29,7 @@ plugin and distribute it to everybody with RubyGem!*
 
 ## Supported Storage Clouds
 * [Firebase Cloud Storage](https://firebase.google.com/docs/storage/?gclid=Cj0KCQiAzfrTBRC_ARIsAJ5ps0uB9qOHR9kDhzlqReNfQlhrRJH7gWwHRCbl-XQRIJEvt9jN6ROPdxQaAohIEALw_wcB)
+* [S3 Amazon](https://aws.amazon.com/s3/?sc_channel=PS&sc_campaign=acquisition_BR&sc_publisher=google&sc_medium=english_s3_b&sc_content=s3_e&sc_detail=s3%20amazon&sc_category=s3&sc_segment=89108864308&sc_matchtype=e&sc_country=BR&s_kwcid=AL!4422!3!89108864308!e!!g!!s3%20amazon&ef_id=WrKALgAABG2ITkaZ:20180321155422:s)
 
 ## Installation
 
@@ -63,6 +64,11 @@ project:
     project_id: "<Insert here Google project ID>"
     credentials_file: "<Insert here The path to credential file that you download from firebase>"
     bucket: "<Insert here the name of destination bucket on google cloud>"
+  s3:
+    region: "<Insert Region Name where you bucket is located"
+    bucket_name: "<The nam of you bucket>"
+    bucket_access_key: '<Your access key>'
+    bucket_secret_key: '<Your secret key>'
 ```
 ### Upload a binary
 

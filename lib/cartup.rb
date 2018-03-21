@@ -25,14 +25,13 @@ module CartBinaryUploader
   end
 
   def self.setup config
-    setup_s3_cloud config
-    # if !config.project.google?
-    #   CartLogger.log_info 'Starting with google cloud'
-    #   setup_google_cloud config
-    # else
-    #   CartLogger.log_info 'Starting with s3 cloud'
-    #   setup_s3_cloud config
-    # end
+    if !config.project.google?
+      CartLogger.log_info 'Starting with google cloud'
+      setup_google_cloud config
+    else
+      CartLogger.log_info 'Starting with s3 cloud'
+      setup_s3_cloud config
+    end
   end
 
   def self.setup_google_cloud(config)
@@ -57,8 +56,13 @@ module CartBinaryUploader
   end
 
   def self.copy_template_yaml
-    from_source_file = './lib/template.yaml'
-    to_destination_file = './cart_uploader.yaml'
+    from_source_file = './lib/template.yaml'.freeze
+    to_destination_file = './cart_uploader.yaml'.freeze
+
+    if File.file?(to_destination_file)
+      throw :cart_up_already_initialized
+    end
+
     CartBinaryUploader.copy_with_path from_source_file, to_destination_file
   end
 

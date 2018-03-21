@@ -1,3 +1,3 @@
 module CartBinaryUploader
-  VERSION = '0.1.7.1'.freeze
+  VERSION = '1.0.0'.freeze
 end
