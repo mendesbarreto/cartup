@@ -18,6 +18,10 @@ module CartBinaryUploader
         CartLogger.log.info string
       end
 
+      def log_warn string
+        CartLogger.log.warn string
+      end
+
       def log_error string
         CartLogger.log.error string.to_s.colorize(:color => :white, :background => :red)
       end
