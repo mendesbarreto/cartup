@@ -56,8 +56,13 @@ module CartBinaryUploader
   end
 
   def self.copy_template_yaml
-    from_source_file = './lib/template.yaml'
-    to_destination_file = './cart_uploader.yaml'
+    from_source_file = './lib/template.yaml'.freeze
+    to_destination_file = './cart_uploader.yaml'.freeze
+
+    if File.file?(to_destination_file)
+      throw :cart_up_already_initialized
+    end
+
     CartBinaryUploader.copy_with_path from_source_file, to_destination_file
   end
 
