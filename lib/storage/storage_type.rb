@@ -38,7 +38,7 @@ module CartBinaryUploader
     end
 
     def upload_framework
-      CartLogger.log_info "Prepering to upload file to google cloud"
+      CartLogger.log_info "Prepering to upload file to cloud"
       framework_name_source = @framework_name + FRAMEWORK_EXTENSION_NAME + JSON_EXTENSION_ZIP
       framework_name_destination = @framework_name + FRAMEWORK_EXTENSION_NAME + "." + @framework_version + JSON_EXTENSION_ZIP
       json_path = @framework_name + JSON_EXTENSION_NAME
@@ -49,7 +49,7 @@ module CartBinaryUploader
 
       CartLogger.log_info "Verifying if the version file #{framework_name_destination} already exists"
       unless file_on_storage_cloud framework_name_destination
-        CartLogger.log_info "File version #{@framework_version} not exists yet, starting generate file on google cloud"
+        CartLogger.log_info "File version #{@framework_version} not exists yet, starting generate file on cloud"
 
         if file_on_storage_cloud(json_path)
           @json_file = download_config_json_file(json_path)
@@ -74,7 +74,7 @@ module CartBinaryUploader
         upload_json json_path
         CartLogger.log_info 'Uploaded complete'
       else
-        throw :the_version_file_already_exists, "The current version: #{@framework_version} already exists on google cloud"
+        throw :the_version_file_already_exists, "The current version: #{@framework_version} already exists on cloud"
       end
     end
 
