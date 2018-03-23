@@ -25,7 +25,7 @@ module CartBinaryUploader
   end
 
   def self.setup config
-    if !config.project.google?
+    if !config.project.google.nil?
       CartLogger.log_info 'Starting with google cloud'
       setup_google_cloud config
     else
