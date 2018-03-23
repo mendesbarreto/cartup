@@ -29,8 +29,8 @@ module CartBinaryUploader
       @bucket = @storage.bucket @bucket_name
     end
 
-    def create_file(file_path)
-      @bucket_object = @bucket.create_file(file_path, file_path)
+    def upload_file(file_path)
+      @bucket_object = @bucket.upload_file(file_path, file_path)
       @bucket_object.signed_url(method: 'GET', expires: 3.154e+8)
     end
 
@@ -44,13 +44,6 @@ module CartBinaryUploader
       json_file.download from_file
       json_file
     end
-
-    def upload_json(json_path)
-      CartLogger.log_info 'Starting upload file to google cloud'
-      @bucket.create_file(json_path, json_path)
-      CartLogger.log_info 'Uploaded complete'
-    end
-
   end
 end
 

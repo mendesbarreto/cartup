@@ -43,11 +43,11 @@ module CartBinaryUploader
       @bucket = @storage.bucket(@bucket_name)
     end
 
-    def create_file(file_path)
-      puts "Creating #{file_path} on s3"
+    def upload_file(file_path)
+      CartLogger.log_info "Creating #{file_path} on s3"
       @bucket_object = @bucket.object(file_path)
       @bucket_object.upload_file("./#{file_path}", acl:'public-read')
-      puts "Object #{file_path} created with url #{@bucket_object.public_url}"
+      CartLogger.log_info "Object #{file_path} created with url #{@bucket_object.public_url}"
       @bucket_object.public_url
     end
 
@@ -63,12 +63,6 @@ module CartBinaryUploader
 
     def download_config_json_file(from_file)
       @bucket.object(from_file)
-    end
-
-    def upload_json(json_path)
-      CartLogger.log_info 'Starting upload json file to s3 cloud'
-      create_file(json_path)
-      CartLogger.log_info 'Uploaded complete'
     end
   end
 end
