@@ -115,10 +115,6 @@ module CartBinaryUploader
       throw :not_implemented, "The current method not implemented"
     end
 
-    def upload_json(json_path)
-      throw :not_implemented, "The current method not implemented"
-    end
-
     def copy_local_file(framework_name_source, framework_name_destination)
       FileUtils.copy_file(framework_name_source, framework_name_destination)
     end
