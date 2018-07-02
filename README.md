@@ -49,6 +49,15 @@ Or install it yourself as:
 
 ## Usage
 
+### GemFile
+
+Add the follow step on GemFile:
+
+```rb
+gem 'google-cloud-storage', '~> 1.9'
+gem 'aws-sdk-s3', '~> 1.8'
+```
+
 ### Setup with yaml
 
 The first thing is to setup the yaml file in your project.
