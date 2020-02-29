@@ -74,7 +74,7 @@ GEM
     powerpack (0.1.1)
     public_suffix (3.0.1)
     rainbow (3.0.0)
-    rake (10.5.0)
+    rake (13.0.1)
     representable (3.0.4)
       declarative (< 0.1.0)
       declarative-option (< 0.2.0)
@@ -107,7 +107,7 @@ DEPENDENCIES
   google-cloud-storage (~> 1.9)
   json (~> 2.1)
   minitest (~> 5.0)
-  rake (~> 10.0)
+  rake (~> 13.0)
   rubocop (~> 0.52.1)
 
 BUNDLED WITH
